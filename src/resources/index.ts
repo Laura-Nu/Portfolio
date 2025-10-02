@@ -2,12 +2,12 @@
 export {
   person,
   social,
-  newsletter,
   home,
   about,
-  blog,
   work,
-  gallery,
+  research,
+  skills,
+  experience,
 } from "./content";
 
 export {

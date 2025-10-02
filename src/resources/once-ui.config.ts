@@ -19,8 +19,10 @@ const baseURL: string = "https://demo.magic-portfolio.com";
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
+  "/skills": true,
+  "/experience": true,
   "/work": true,
-  "/blog": true,
+  "/research": true,
   "/gallery": true,
 };
 
@@ -200,7 +202,7 @@ const sameAs: SameAsConfig = {
   discord: "https://discord.com/invite/5EyAQ4eNdS",
 };
 
-// social sharing configuration for blog posts
+// social sharing configuration for research posts
 const socialSharing: SocialSharingConfig = {
   display: true,
   platforms: {

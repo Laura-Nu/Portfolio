@@ -14,16 +14,15 @@ import {
   Media,
   Line,
 } from "@once-ui-system/core";
-import { baseURL, about, blog, person } from "@/resources";
-import { formatDate } from "@/utils/formatDate";
+import { baseURL, about, research, person } from "@/resources";
 import { getPosts } from "@/utils/utils";
 import { Metadata } from "next";
 import React from "react";
-import { Posts } from "@/components/blog/Posts";
-import { ShareSection } from "@/components/blog/ShareSection";
+import { Posts } from "@/components/research/Posts";
+import { ShareSection } from "@/components/research/ShareSection";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "blog", "posts"]);
+  const posts = getPosts(["src", "app", "research", "posts"]);
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -39,7 +38,7 @@ export async function generateMetadata({
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  const posts = getPosts(["src", "app", "blog", "posts"]);
+  const posts = getPosts(["src", "app", "research", "posts"]);
   let post = posts.find((post) => post.slug === slugPath);
 
   if (!post) return {};
@@ -49,26 +48,21 @@ export async function generateMetadata({
     description: post.metadata.summary,
     baseURL: baseURL,
     image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
-    path: `${blog.path}/${post.slug}`,
+    path: `${research.path}/${post.slug}`,
   });
 }
 
-export default async function Blog({ params }: { params: Promise<{ slug: string | string[] }> }) {
+export default async function Research({ params }: { params: Promise<{ slug: string | string[] }> }) {
   const routeParams = await params;
   const slugPath = Array.isArray(routeParams.slug)
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === slugPath);
+  let post = getPosts(["src", "app", "research", "posts"]).find((post) => post.slug === slugPath);
 
   if (!post) {
     notFound();
   }
-
-  const avatars =
-    post.metadata.team?.map((person) => ({
-      src: person.avatar,
-    })) || [];
 
   return (
     <Row fillWidth>
@@ -78,7 +72,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
           <Schema
             as="blogPosting"
             baseURL={baseURL}
-            path={`${blog.path}/${post.slug}`}
+            path={`${research.path}/${post.slug}`}
             title={post.metadata.title}
             description={post.metadata.summary}
             datePublished={post.metadata.publishedAt}
@@ -94,12 +88,9 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
             }}
           />
           <Column maxWidth="s" gap="16" horizontal="center" align="center">
-            <SmartLink href="/blog">
-              <Text variant="label-strong-m">Blog</Text>
+            <SmartLink href="/research">
+              <Text variant="label-strong-m">Research</Text>
             </SmartLink>
-            <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
-              {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
-            </Text>
             <Heading variant="display-strong-m">{post.metadata.title}</Heading>
           </Column>
           <Row marginBottom="32" horizontal="center">
@@ -129,7 +120,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
           
           <ShareSection 
             title={post.metadata.title} 
-            url={`${baseURL}${blog.path}/${post.slug}`} 
+            url={`${baseURL}${research.path}/${post.slug}`} 
           />
 
           <Column fillWidth gap="40" horizontal="center" marginTop="40">

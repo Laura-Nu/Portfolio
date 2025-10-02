@@ -1,36 +1,36 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
 import { Mailchimp } from "@/components";
-import { Posts } from "@/components/blog/Posts";
-import { baseURL, blog, person, newsletter } from "@/resources";
+import { Posts } from "@/components/research/Posts";
+import { baseURL, research, person, newsletter } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: blog.title,
-    description: blog.description,
+    title: research.title,
+    description: research.description,
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(blog.title)}`,
-    path: blog.path,
+    image: `/api/og/generate?title=${encodeURIComponent(research.title)}`,
+    path: research.path,
   });
 }
 
-export default function Blog() {
+export default function Research() {
   return (
     <Column maxWidth="m" paddingTop="24">
       <Schema
         as="blogPosting"
         baseURL={baseURL}
-        title={blog.title}
-        description={blog.description}
-        path={blog.path}
-        image={`/api/og/generate?title=${encodeURIComponent(blog.title)}`}
+        title={research.title}
+        description={research.description}
+        path={research.path}
+        image={`/api/og/generate?title=${encodeURIComponent(research.title)}`}
         author={{
           name: person.name,
-          url: `${baseURL}/blog`,
+          url: `${baseURL}/research`,
           image: `${baseURL}${person.avatar}`,
         }}
       />
       <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">
-        {blog.title}
+        {research.title}
       </Heading>
       <Column fillWidth flex={1} gap="40">
         <Posts range={[1, 1]} thumbnail />

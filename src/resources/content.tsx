@@ -1,21 +1,16 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Research, Home, Person, Social, Skills, Experience, Work} from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
-};
-
-const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  firstName: "Laura",
+  lastName: "Nuñez",
+  name: `Laura Nuñez`,
+  role: "Computer Systems Engineer",
+  avatar: "/images/avatar.png",
+  email: "nunez.lau15@gmail.com",
+  phone: "+591 75992287",
+  location: "Bolivia - Cochabamba",
+  languages: ["English", "Spanish"],
 };
 
 const social: Social = [
@@ -24,17 +19,12 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Laura-Nu",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/maria-laura-nu%C3%B1ez-jaillita-8a3b87311/",
   },
   {
     name: "Email",
@@ -228,13 +218,13 @@ const about: About = {
   },
 };
 
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
+const research: Research = {
+  path: "/research",
+  label: "Research",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  // Create new research posts by adding a new .mdx file to app/research/posts
+  // All posts will be listed on the /research route
 };
 
 const work: Work = {
@@ -242,59 +232,53 @@ const work: Work = {
   label: "Work",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
+  // Create new project pages by adding a new .mdx file to app/research/posts
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
+const skills: Skills = {
+  path: "/skills",
+  label: "Skills",
+  title: `Skills – ${person.name}`,
+  description: `Technical and soft skills of ${person.name}`,
+  skills: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
+      title: "Frontend",
+      description: <>Building web apps with React, Next.js, TailwindCSS.</>,
+      tags: ["React", "Next.js", "TailwindCSS"],
     },
     {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
+      title: "Backend",
+      description: <>APIs and databases with Node.js, Express, Supabase, PostgreSQL.</>,
+      tags: ["Node.js", "Supabase", "PostgreSQL"],
     },
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+const experience: Experience = {
+  path: "/experience",
+  label: "Experience",
+  title: `Experience – ${person.name}`,
+  description: `Professional experience of ${person.name}`,
+  experiences: [
+    {
+      company: "DocIA",
+      timeframe: "2023 – Present",
+      role: "Software Engineer",
+      achievements: [
+        <>Led development of backend services in Node.js + Supabase.</>,
+        <>Integrated Flutter mobile client with Firestore and Huawei Cloud.</>,
+      ],
+    },
+    {
+      company: "Univalle Projects",
+      timeframe: "2021 – 2023",
+      role: "Fullstack Developer",
+      achievements: [
+        <>Built academic and entrepreneurial apps using React and Firebase.</>,
+      ],
+    },
+  ],
+};
+
+export { person, social, home, about, research, skills, experience, work };

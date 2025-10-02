@@ -1,11 +1,4 @@
 import { IconName } from "@/resources/icons";
-import { zones } from "tzdata";
-
-/**
- * IANA time zone string (e.g., 'Asia/Calcutta', 'Europe/Vienna').
- * See: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
- */
-export type IANATimeZone = Extract<keyof typeof zones, string>; // Narrow to string keys for React usage
 
 /**
  * Represents a person featured in the portfolio.
@@ -23,8 +16,8 @@ export type Person = {
   avatar: string;
   /** Email address */
   email: string;
-  /** IANA time zone location */
-  location: IANATimeZone;
+  phone?: string;
+  location: string;
   /** Languages spoken */
   languages?: string[];
 };
@@ -210,10 +203,10 @@ export interface About extends BasePageConfig {
 }
 
 /**
- * Blog page configuration.
- * @description Configuration for the Blog page, including metadata and navigation label.
+ * Research page configuration.
+ * @description Configuration for the Research page, including metadata and navigation label.
  */
-export interface Blog extends BasePageConfig {}
+export interface Research extends BasePageConfig {}
 
 /**
  * Work/projects page configuration.
@@ -222,17 +215,33 @@ export interface Blog extends BasePageConfig {}
 export interface Work extends BasePageConfig {}
 
 /**
- * Gallery page configuration.
- * @description Configuration for the Gallery page, including metadata, navigation label, and image list.
+ * Skills page configuration.
  */
-export interface Gallery extends BasePageConfig {
-  /** List of images in the gallery */
-  images: Array<{
-    /** Image source path */
-    src: string;
-    /** Image alt text */
-    alt: string;
-    /** Image orientation (horizontal/vertical) */
-    orientation: string;
+export interface Skills extends BasePageConfig {
+  /** Skills section */
+  skills: Array<{
+    /** Skill title */
+    title: string;
+    /** Skill description */
+    description?: React.ReactNode;
+    /** Optional tags or technologies */
+    tags?: string[];
+  }>;
+}
+
+/**
+ * Experience page configuration.
+ */
+export interface Experience extends BasePageConfig {
+  /** List of professional experiences */
+  experiences: Array<{
+    /** Company or organization */
+    company: string;
+    /** Timeframe of employment */
+    timeframe: string;
+    /** Role or position */
+    role: string;
+    /** Achievements, responsibilities, etc. */
+    achievements: React.ReactNode[];
   }>;
 }
