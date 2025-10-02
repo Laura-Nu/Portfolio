@@ -5,6 +5,7 @@ import { Button, Column, Row, Input, Textarea, Heading, Text } from "@once-ui-sy
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaRegCopy } from "react-icons/fa";
 import { person } from "@/resources";
 import toast from "react-hot-toast";
+import emailjs from "emailjs-com";
 
 export const Mailchimp: React.FC = () => {
   const [form, setForm] = useState({
@@ -21,7 +22,29 @@ export const Mailchimp: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Formulario enviado:", form);
+
+    emailjs
+      .send(
+        "service_9okiv0v",
+        "template_wc8yomf",
+        {
+          from_name: form.name,
+          from_email: form.email,
+          subject: form.subject,
+          message: form.message,
+        },
+        "Z-RgZfYYEiQL7e8xt"
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully!");
+          setForm({ name: "", email: "", subject: "", message: "" });
+        },
+        (error) => {
+          console.error("FAILED...", error);
+          toast.error("Failed to send message.");
+        }
+      );
   };
 
   const handleCopy = async (text: string, label: string) => {

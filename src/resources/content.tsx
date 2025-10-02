@@ -1,4 +1,4 @@
-import { About, Research, Home, Person, Social, Skills, Experience, Work} from "@/types";
+import { About, Research, Home, Person, Social, Skills, Experience, Projects} from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -7,7 +7,7 @@ const person: Person = {
   name: `Laura Nuñez`,
   role: "Computer Systems Engineer",
   avatar: "/images/avatar.png",
-  email: "nunez.lau15@gmail.com",
+  email: "lau.nunez@outlook.es",
   phone: "+591 75992287",
   location: "Bolivia - Cochabamba",
   languages: ["English", "Spanish"],
@@ -227,9 +227,9 @@ const research: Research = {
   // All posts will be listed on the /research route
 };
 
-const work: Work = {
+const work: Projects = {
   path: "/work",
-  label: "Work",
+  label: "Projects",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/research/posts

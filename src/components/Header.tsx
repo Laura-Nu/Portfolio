@@ -120,7 +120,7 @@ export const Header = () => {
               )}
 
               {/* Research */}
-              {routes["/research"] && (
+              {/*routes["/research"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
@@ -138,7 +138,7 @@ export const Header = () => {
                     />
                   </Row>
                 </>
-              )}
+              )*/}
 
               {display.themeSwitcher && (
                 <>
