@@ -1,4 +1,4 @@
-import { About, Research, Home, Person, Social, Skills, Experience, Projects} from "@/types";
+import { About, Research, Home, Person, Social, Skills, Experience, Projects } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -71,7 +71,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Get to know ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -88,134 +88,156 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I am a proactive and organized Computer Systems Engineering student at
+        Universidad del Valle. I stand out for teamwork, quick decision-making,
+        and the ability to perform under pressure. My focus is on building scalable
+        mobile and web applications, working as a Full-Stack Developer, and applying
+        agile methodologies such as Scrum and XP.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "UMA",
+        timeframe: "Feb 2024 – Present",
+        role: "Full-Stack Developer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          <>Maintenance of mobile and web projects deployed to production (Play Store).</>,
+          <>Debugging and implementing new functionalities.</>,
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Universidad del Valle",
+        timeframe: "Mar 2024 – Jun 2025",
+        role: "Teaching Assistant – Computer Science Fundamentals",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>Prepared weekly reports and classes for the subject.</>,
+          <>Guided students in consultations and exercises on derivatives, integrals, and function analysis.</>,
         ],
-        images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Universidad del Valle – Cochabamba, Bolivia",
+        description: (
+          <div style={{ margin: 0, paddingLeft: "20px" }}>
+            <p style={{ margin: "4px 0", fontWeight: "bold", fontSize: "15px", color: "#2c3e50" }}>
+              Bachelor’s in Computer Systems Engineering
+            </p>
+            <ul style={{ margin: "6px 0", paddingLeft: "20px", lineHeight: "1.6" }}>
+              <li>Currently in 8th semester</li>
+              <li>GPA: 85.7</li>
+              <li>2022 – Present</li>
+            </ul>
+          </div>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Methodologies & Architecture",
     skills: [
       {
-        title: "Figma",
+        title: "Programming Languages",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <ul style={{ margin: 0, paddingLeft: "20px" }}>
+            <li>C#</li>
+            <li>Java</li>
+            <li>JavaScript / TypeScript</li>
+            <li>SQL</li>
+            <li>HTML</li>
+            <li>Dart</li>
+            <li>Python</li>
+          </ul>
         ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
-        title: "Next.js",
+        title: "Frameworks & Tools",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <ul style={{ margin: 0, paddingLeft: "20px" }}>
+            <li>ReactJS</li>
+            <li>ASP.NET Core</li>
+            <li>Bootstrap</li>
+            <li>Flutter</li>
+            <li>Node.js</li>
+            <li>Android Studio</li>
+            <li>Unity</li>
+          </ul>
         ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },  
+      },
+      {
+        title: "Databases",
+        description: (
+          <ul style={{ margin: 0, paddingLeft: "20px" }}>
+            <li>SQL Server</li>
+            <li>MySQL</li>
+            <li>Firebase</li>
+            <li>MongoDB</li>
+            <li>PostgreSQL</li>
+            <li>Oracle DB</li>
+          </ul>
+        ),
+      },
+      {
+        title: "Methodologies & Practices",
+        description: (
+          <ul style={{ margin: 0, paddingLeft: "20px" }}>
+            <li>Agile (Scrum, XP)</li>
+            <li>Architecture patterns: Client-Server, MVC</li>
+          </ul>
+        ),
+      },
+      {
+        title: "Other Tools",
+        description: (
+          <ul style={{ margin: 0, paddingLeft: "20px" }}>
+            <li>Git</li>
+            <li>Trello</li>
+            <li>Linear</li>
+            <li>Figma</li>
+          </ul>
+        ),
+      },
+      {
+        title: "Languages",
+        description: (
+          <ul style={{ margin: 0, paddingLeft: "20px" }}>
+            <li>Spanish (native)</li>
+            <li>English (intermediate)</li>
+          </ul>
+        ),
+      },
+      {
+        title: "Certifications",
+        description: (
+          <ul style={{ margin: 0, paddingLeft: "20px" }}>
+            <li>NDG Linux Unhatched – Cisco Networking Academy (2022)</li>
+            <li>Database Foundations – Oracle Academy (2022)</li>
+            <li>CCNAv7: Introduction to Networks – Cisco Networking Academy (2024)</li>
+            <li>Introduction to Data Science – Cisco Networking Academy (2024)</li>
+            <li>
+              More certifications available on{" "}
+              <a
+                href="https://www.credly.com/users/maria-laura-nunez-jaillita"
+                target="_blank"
+                style={{ color: "#2980b9" }}
+              >
+                Credly Profile
+              </a>
+            </li>
+          </ul>
+        ),
+      },
     ],
-  },
+  }
 };
 
 const research: Research = {
@@ -239,7 +261,7 @@ const work: Projects = {
 const skills: Skills = {
   path: "/skills",
   label: "Skills",
-  title: `Skills – ${person.name}`,
+  title: `Technical Skills – ${person.name}`,
   description: `Technical and soft skills of ${person.name}`,
   skills: [
     {

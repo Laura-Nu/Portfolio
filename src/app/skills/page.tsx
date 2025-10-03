@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
 import { baseURL, about, person, skills } from "@/resources";
+import SkillGrid from "./SkillGrid";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -27,10 +28,17 @@ export default function Skills() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xl" align="center">
+
+      <Heading
+        as="h2"
+        id={skills.title}
+        variant="display-strong-s"
+        marginBottom="40"
+      >
         {skills.title}
       </Heading>
-      {/* TODO: aquí podés mapear skills.skills para listarlos */}
+
+      <SkillGrid />
     </Column>
   );
 }
