@@ -3,14 +3,17 @@
 import { SkillCard } from "@/components/skills/SkillCard";
 import { useState } from "react";
 import {
-    FaJava, FaPython, FaDocker, FaGitAlt, FaReact, FaNodeJs, FaGithub, 
+    FaJava, FaPython, FaDocker, FaGitAlt, FaReact, FaNodeJs, FaGithub,
     FaGitlab, FaHtml5, FaUnity, FaAndroid, FaDatabase, FaCss3Alt, FaCloud
 } from "react-icons/fa";
 import {
     SiSharp, SiTypescript, SiFlutter, SiPostgresql, SiMongodb, SiOracle, SiFirebase,
     SiMysql, SiTailwindcss, SiBootstrap, SiDotnet, SiDart,
-    SiTrello, SiLinear, SiFigma, SiJavascript
+    SiTrello, SiLinear, SiFigma, SiJavascript, SiGooglecloud, SiUbuntu,
+    SiVite, SiArduino, SiPostman
 } from "react-icons/si";
+
+import { DiVisualstudio } from "react-icons/di";
 
 export default function SkillGrid() {
     const [showAll, setShowAll] = useState(false);
@@ -31,23 +34,36 @@ export default function SkillGrid() {
         { icon: SiTypescript, name: "TypeScript", color: "#3178C6" },
         { icon: SiDart, name: "Dart", color: "#0175C2" },
         { icon: FaPython, name: "Python", color: "#3776AB" },
-        { icon: FaHtml5, name: "HTML", color: "#E34F26" },
-        { icon: FaCss3Alt, name: "CSS", color: "#1572B6" },
         { icon: FaGitAlt, name: "Git", color: "#F05032" },
 
         // Frameworks & herramientas
         { icon: FaNodeJs, name: "Node.js", color: "#339933" },
         { icon: FaReact, name: "ReactJS", color: "#61DAFB" },
         { icon: SiDotnet, name: "ASP.NET Core", color: "#512BD4" },
+        { icon: SiVite, name: "Vite", color: "#646CFF" },
         { icon: FaAndroid, name: "Android Studio", color: "#3DDC84" },
         { icon: FaUnity, name: "Unity", color: "#000000" },
         { icon: SiFlutter, name: "Flutter", color: "#02569B" },
+        { icon: FaHtml5, name: "HTML", color: "#E34F26" },
+        { icon: FaCss3Alt, name: "CSS", color: "#1572B6" },
         { icon: SiBootstrap, name: "Bootstrap", color: "#7952B3" },
         { icon: SiTailwindcss, name: "Tailwind", color: "#06B6D4" },
 
+        // IDEs
+        { icon: DiVisualstudio, name: "Visual Studio", color: "#5C2D91" },
+        { icon: DiVisualstudio, name: "VS Code", color: "#007ACC" },
+        { icon: SiArduino, name: "Arduino IDE", color: "#00979D" },
+
+        // Collaboration & Testing
+        { icon: SiPostman, name: "Postman", color: "#FF6C37" },
+
         //Cloud
         { icon: FaCloud, name: "Huawei Cloud", color: "#C7000B" },
-        
+        { icon: SiGooglecloud, name: "Google Cloud", color: "#4285F4" },
+
+        // Sistemas Operativos
+        { icon: SiUbuntu, name: "Ubuntu Linux", color: "#E95420" },
+
         // Colaboración
         { icon: FaDocker, name: "Docker", color: "#2496ED" },
         { icon: FaGithub, name: "GitHub", color: "#181717" },

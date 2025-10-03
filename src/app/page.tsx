@@ -103,13 +103,9 @@ export default function Home() {
         </Column>
       </Column>
 
-      {/* Projects destacados */}
-      <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
-      </RevealFx>
-
+      {/* Skills */}
       <Column fillWidth gap="24" marginBottom="l">
-        <Row fillWidth paddingRight="64">
+        <Row fillWidth paddingRight="64" horizontal="center">
           <Line maxWidth={48} />
         </Row>
 
@@ -122,13 +118,13 @@ export default function Home() {
 
         <SkillGrid />
 
-        <Row fillWidth paddingLeft="64" horizontal="end">
+        <Row fillWidth paddingLeft="64" horizontal="center">
           <Line maxWidth={48} />
         </Row>
       </Column>
 
-      {/* Más proyectos */}
-      <Projects range={[2]} />
+      {/* Projects destacados */}
+      <Projects range={[1]} />
 
       {/* Contacto */}
       <Mailchimp />

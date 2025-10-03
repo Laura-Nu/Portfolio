@@ -212,18 +212,3 @@ export interface Research extends BasePageConfig {}
  * @description Configuration for the Work/Projects page, including metadata and navigation label.
  */
 export interface Projects extends BasePageConfig {}
-
-/**
- * Skills page configuration.
- */
-export interface Skills extends BasePageConfig {
-  /** Skills section */
-  skills: Array<{
-    /** Skill title */
-    title: string;
-    /** Skill description */
-    description?: React.ReactNode;
-    /** Optional tags or technologies */
-    tags?: string[];
-  }>;
-}

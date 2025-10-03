@@ -1,4 +1,4 @@
-import { About, Research, Home, Person, Social, Skills, Projects } from "@/types";
+import { About, Research, Home, Person, Social, Projects } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -275,23 +275,4 @@ const work: Projects = {
   // All projects will be listed on the /home and /work routes
 };
 
-const skills: Skills = {
-  path: "/skills",
-  label: "Skills",
-  title: `Technical Skills – ${person.name}`,
-  description: `Technical and soft skills of ${person.name}`,
-  skills: [
-    {
-      title: "Frontend",
-      description: <>Building web apps with React, Next.js, TailwindCSS.</>,
-      tags: ["React", "Next.js", "TailwindCSS"],
-    },
-    {
-      title: "Backend",
-      description: <>APIs and databases with Node.js, Express, Supabase, PostgreSQL.</>,
-      tags: ["Node.js", "Supabase", "PostgreSQL"],
-    },
-  ],
-};
-
-export { person, social, home, about, research, skills, work };
+export { person, social, home, about, research, work };
