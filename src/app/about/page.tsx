@@ -107,7 +107,7 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
+            {about.document?.display && (
               <Row
                 fitWidth
                 border="brand-alpha-medium"
@@ -122,10 +122,11 @@ export default function About() {
                   backdropFilter: "blur(var(--static-space-1))",
                 }}
               >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
+                <Icon paddingLeft="12" name="download" onBackground="brand-weak" />
+                <Row paddingX="8">{about.document.label}</Row>
                 <IconButton
-                  href={about.calendar.link}
+                  href={about.document.link}
+                  download
                   data-border="rounded"
                   variant="secondary"
                   icon="chevronRight"

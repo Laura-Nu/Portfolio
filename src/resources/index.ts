@@ -7,7 +7,6 @@ export {
   work,
   research,
   skills,
-  experience,
 } from "./content";
 
 export {

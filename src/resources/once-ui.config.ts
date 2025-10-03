@@ -19,8 +19,6 @@ const baseURL: string = "https://demo.magic-portfolio.com";
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
-  "/skills": true,
-  "/experience": true,
   "/work": true,
   "/research": true,
   "/gallery": true,

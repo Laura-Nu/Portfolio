@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, research, skills, experience, work } from "@/resources";
+import { routes, display, person, about, skills, work } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -85,16 +85,6 @@ export const Header = () => {
                   href="/skills"
                   label={skills.label}
                   selected={pathname.startsWith("/skills")}
-                />
-              )}
-
-              {/* Experience */}
-              {routes["/experience"] && (
-                <ToggleButton
-                  prefixIcon="briefcase"
-                  href="/experience"
-                  label={experience.label}
-                  selected={pathname.startsWith("/experience")}
                 />
               )}
 

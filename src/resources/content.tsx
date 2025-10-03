@@ -1,5 +1,5 @@
-import { About, Research, Home, Person, Social, Skills, Experience, Projects } from "@/types";
-import { Line, Logo, Row, Text } from "@once-ui-system/core";
+import { About, Research, Home, Person, Social, Skills, Projects } from "@/types";
+import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Laura",
@@ -27,6 +27,11 @@ const social: Social = [
     link: "https://www.linkedin.com/in/maria-laura-nu%C3%B1ez-jaillita-8a3b87311/",
   },
   {
+    name: "Credly",
+    icon: "credly",
+    link: `https://www.credly.com/users/maria-laura-nunez-jaillita`,
+  },
+  {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
@@ -39,9 +44,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building bridges between imagination and code</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
@@ -51,19 +56,21 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "",
   },
   subline: (
-    <>
-      I'm Laura, a system engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
+    <Text
+      variant="body-default-l"
+      onBackground="neutral-weak"
+      align="center"
+    >
+      I'm Laura, a Computer Systems Engineer at <strong>BruliTech</strong>,
+      where I bring ideas to life by crafting intuitive and meaningful
+      user experiences.
+      <br />
+      Beyond work, I dedicate my time to building personal projects that
+      challenge me, inspire creativity, and push me to keep growing as a developer.
+    </Text>
   ),
 };
 
@@ -79,9 +86,10 @@ const about: About = {
   avatar: {
     display: true,
   },
-  calendar: {
+  document: {
     display: true,
-    link: "https://cal.com",
+    link: "/docs/CV_Laura_Nuñez.pdf",
+    label: "Download CV (PDF version)",
   },
   intro: {
     display: true,
@@ -100,6 +108,15 @@ const about: About = {
     display: true,
     title: "Work Experience",
     experiences: [
+      {
+        company: "DocIA",
+        timeframe: "Apr 2025 – Present",
+        role: "Software Engineer",
+        achievements: [
+          <>Led development of backend services in Node.js + Supabase.</>,
+          <>Integrated Flutter mobile client with Firestore and Huawei Cloud.</>,
+        ],
+      },
       {
         company: "UMA",
         timeframe: "Feb 2024 – Present",
@@ -277,30 +294,4 @@ const skills: Skills = {
   ],
 };
 
-const experience: Experience = {
-  path: "/experience",
-  label: "Experience",
-  title: `Experience – ${person.name}`,
-  description: `Professional experience of ${person.name}`,
-  experiences: [
-    {
-      company: "DocIA",
-      timeframe: "2023 – Present",
-      role: "Software Engineer",
-      achievements: [
-        <>Led development of backend services in Node.js + Supabase.</>,
-        <>Integrated Flutter mobile client with Firestore and Huawei Cloud.</>,
-      ],
-    },
-    {
-      company: "Univalle Projects",
-      timeframe: "2021 – 2023",
-      role: "Fullstack Developer",
-      achievements: [
-        <>Built academic and entrepreneurial apps using React and Firebase.</>,
-      ],
-    },
-  ],
-};
-
-export { person, social, home, about, research, skills, experience, work };
+export { person, social, home, about, research, skills, work };

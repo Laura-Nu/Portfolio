@@ -4,7 +4,7 @@ import { SkillCard } from "@/components/skills/SkillCard";
 import { useState } from "react";
 import {
     FaJava, FaPython, FaDocker, FaGitAlt, FaReact, FaNodeJs, FaGithub, 
-    FaGitlab, FaHtml5, FaUnity, FaAndroid, FaDatabase, FaCss3Alt
+    FaGitlab, FaHtml5, FaUnity, FaAndroid, FaDatabase, FaCss3Alt, FaCloud
 } from "react-icons/fa";
 import {
     SiSharp, SiTypescript, SiFlutter, SiPostgresql, SiMongodb, SiOracle, SiFirebase,
@@ -45,6 +45,9 @@ export default function SkillGrid() {
         { icon: SiBootstrap, name: "Bootstrap", color: "#7952B3" },
         { icon: SiTailwindcss, name: "Tailwind", color: "#06B6D4" },
 
+        //Cloud
+        { icon: FaCloud, name: "Huawei Cloud", color: "#C7000B" },
+        
         // Colaboración
         { icon: FaDocker, name: "Docker", color: "#2496ED" },
         { icon: FaGithub, name: "GitHub", color: "#181717" },
