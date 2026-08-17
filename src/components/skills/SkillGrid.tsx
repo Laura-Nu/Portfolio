@@ -7,7 +7,7 @@ import {
     FaGitlab, FaHtml5, FaUnity, FaAndroid, FaDatabase, FaCss3Alt, FaCloud
 } from "react-icons/fa";
 import {
-    SiSharp, SiTypescript, SiFlutter, SiPostgresql, SiMongodb, SiOracle, SiFirebase,
+    SiSharp, SiTypescript, SiFlutter, SiPostgresql, SiMongodb, SiFirebase,
     SiMysql, SiTailwindcss, SiBootstrap, SiDotnet, SiDart,
     SiTrello, SiLinear, SiFigma, SiJavascript, SiGooglecloud, SiUbuntu,
     SiVite, SiArduino, SiPostman
@@ -25,7 +25,7 @@ export default function SkillGrid() {
         { icon: SiFirebase, name: "Firebase", color: "#FFCA28" },
         { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
         { icon: SiPostgresql, name: "PostgreSQL", color: "#336791" },
-        { icon: SiOracle, name: "Oracle DB", color: "#F80000" },
+        { icon: FaDatabase, name: "Oracle DB", color: "#F80000" },
 
         // Lenguajes
         { icon: SiSharp, name: "C#", color: "#68217A" },

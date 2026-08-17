@@ -75,7 +75,7 @@ export const Mailchimp: React.FC = () => {
         Have a project in mind or a question? Reach out and let's turn your ideas into reality.
       </Text>
 
-      <Row fillWidth gap="48" s={{ direction: ["column", "row"] }}>
+      <Row fillWidth gap="48" s={{ direction: "column" }}>
         {/* Columna izquierda: datos de contacto */}
         <Column gap="20" flex={1}>
           <Row vertical="center" gap="12">
