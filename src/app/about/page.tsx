@@ -1,7 +1,8 @@
 import {
   Avatar, Button, Column, Heading, Icon, IconButton,
-  Media, Tag, Text, Meta, Schema, Row
-} from "@once-ui-system/core";
+  Media, Tag, Text, Row
+} from "@once-ui-system/core/components";
+import { Meta, Schema } from "@once-ui-system/core/modules";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";

@@ -7,10 +7,9 @@ import {
   Column,
   Badge,
   Row,
-  Schema,
-  Meta,
   Line,
-} from "@once-ui-system/core";
+} from "@once-ui-system/core/components";
+import { Schema, Meta } from "@once-ui-system/core/modules";
 import { home, about, person, baseURL } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";

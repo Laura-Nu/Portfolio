@@ -1,4 +1,5 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
+import { Column, Heading } from "@once-ui-system/core/components";
+import { Meta, Schema } from "@once-ui-system/core/modules";
 import { Posts } from "@/components/research/Posts";
 import { baseURL, research, person } from "@/resources";
 

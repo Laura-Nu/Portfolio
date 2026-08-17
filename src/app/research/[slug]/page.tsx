@@ -1,11 +1,8 @@
 import { notFound } from "next/navigation";
 import { CustomMDX, ScrollToHash } from "@/components";
 import {
-  Meta,
-  Schema,
   Column,
   Heading,
-  HeadingNav,
   Icon,
   Row,
   Text,
@@ -13,7 +10,8 @@ import {
   Avatar,
   Media,
   Line,
-} from "@once-ui-system/core";
+} from "@once-ui-system/core/components";
+import { Meta, Schema, HeadingNav } from "@once-ui-system/core/modules";
 import { baseURL, about, research, person } from "@/resources";
 import { getPosts } from "@/utils/utils";
 import { Metadata } from "next";

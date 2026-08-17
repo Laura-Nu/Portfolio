@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
 import { getPosts } from "@/utils/utils";
 import {
-  Meta,
-  Schema,
   AvatarGroup,
   Column,
   Heading,
@@ -11,7 +9,8 @@ import {
   SmartLink,
   Row,
   Line,
-} from "@once-ui-system/core";
+} from "@once-ui-system/core/components";
+import { Meta, Schema } from "@once-ui-system/core/modules";
 import { baseURL, about, person, work } from "@/resources";
 import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
