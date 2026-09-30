@@ -92,7 +92,7 @@ const about: About = {
     display: true,
   },
   document: {
-    display: true,
+    display: false,
     link: "/docs/CV_Laura_Nuñez.pdf",
     label: "Download CV (PDF version)",
   },
