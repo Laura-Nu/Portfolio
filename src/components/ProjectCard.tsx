@@ -6,6 +6,7 @@ import {
   Column,
   Flex,
   Heading,
+  Media,
   SmartLink,
   Text,
 } from "@once-ui-system/core";
@@ -30,15 +31,34 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   avatars,
   link,
 }) => {
+  const isVideo = (src: string) => /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(src);
+
   return (
     <Column fillWidth gap="m">
       <Carousel
         aspectRatio="16 / 9"
         sizes="(max-width: 960px) 100vw, 960px"
-        items={images.map((image) => ({
-          slide: image,
-          alt: title,
-        }))}
+        items={images.map((image) => {
+          if (isVideo(image)) {
+            return {
+              slide: (
+                <Media
+                  src={image}
+                  alt={title}
+                  aspectRatio="16 / 9"
+                  objectFit="contain"
+                  style={{ background: "#000" }}
+                />
+              ),
+              alt: title,
+            };
+          }
+
+          return {
+            slide: image,
+            alt: title,
+          };
+        })}
       />
       <Flex
         s={{ direction: "column" }}
