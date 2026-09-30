@@ -27,7 +27,8 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
-  SiCredly
+  SiCredly,
+  SiOrcid,
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
@@ -43,6 +44,7 @@ export const iconLibrary: Record<string, IconType> = {
   openLink: HiOutlineLink,
   calendar: HiCalendarDays,
   credly: SiCredly,
+  orcid: SiOrcid,
   home: PiHouseDuotone,
   gallery: PiImageDuotone,
   discord: FaDiscord,

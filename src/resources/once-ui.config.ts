@@ -13,15 +13,14 @@ import {
 } from "@/types";
 import { home } from "./index";
 
-// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+// Used for SEO in meta tags and schema. Set NEXT_PUBLIC_SITE_URL in Netlify for your custom domain.
+const baseURL: string = process.env.NEXT_PUBLIC_SITE_URL || "https://laura-nu.netlify.app";
 
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
   "/work": true,
   "/research": true,
-  "/gallery": true,
 };
 
 const display: DisplayConfig = {
@@ -33,7 +32,6 @@ const display: DisplayConfig = {
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
 };
 
 // Import and set font for each variant
@@ -187,10 +185,10 @@ const mailchimp: MailchimpConfig = {
 // default schema data
 const schema: SchemaConfig = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
+  type: "Person",
+  name: "Laura Nuñez",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "lau.nunez@outlook.es",
 };
 
 // social links

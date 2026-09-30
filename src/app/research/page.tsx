@@ -8,7 +8,7 @@ export async function generateMetadata() {
     title: research.title,
     description: research.description,
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(research.title)}`,
+    image: person.avatar,
     path: research.path,
   });
 }
@@ -22,7 +22,7 @@ export default function Research() {
         title={research.title}
         description={research.description}
         path={research.path}
-        image={`/api/og/generate?title=${encodeURIComponent(research.title)}`}
+        image={person.avatar}
         author={{
           name: person.name,
           url: `${baseURL}/research`,

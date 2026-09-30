@@ -38,11 +38,16 @@ export async function generateMetadata({
 
   if (!post) return {};
 
+  const metadataImage =
+    post.metadata.image ||
+    post.metadata.images.find((image) => !image.endsWith(".mp4")) ||
+    person.avatar;
+
   return Meta.generate({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
-    image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
+    image: metadataImage,
     path: `${work.path}/${post.slug}`,
   });
 }
@@ -63,6 +68,11 @@ export default async function Project({
     notFound();
   }
 
+  const metadataImage =
+    post.metadata.image ||
+    post.metadata.images.find((image) => !image.endsWith(".mp4")) ||
+    person.avatar;
+
   const avatars =
     post.metadata.team?.map((person) => ({
       src: person.avatar,
@@ -78,9 +88,7 @@ export default async function Project({
         description={post.metadata.summary}
         datePublished={post.metadata.publishedAt}
         dateModified={post.metadata.publishedAt}
-        image={
-          post.metadata.image || `/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`
-        }
+        image={metadataImage}
         author={{
           name: person.name,
           url: `${baseURL}${about.path}`,

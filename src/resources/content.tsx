@@ -32,6 +32,11 @@ const social: Social = [
     link: `https://www.credly.com/users/maria-laura-nunez-jaillita`,
   },
   {
+    name: "ORCID",
+    icon: "orcid",
+    link: "https://orcid.org/0009-0006-3400-1353",
+  },
+  {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
@@ -40,7 +45,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/avatar.png",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
@@ -64,9 +69,9 @@ const home: Home = {
       onBackground="neutral-weak"
       align="center"
     >
-      I'm Laura, a Computer Systems Engineer at <strong>BruliTech</strong>,
-      where I bring ideas to life by crafting intuitive and meaningful
-      user experiences.
+      I'm Laura, a Computer Systems Engineer and Full Stack Developer,
+      bringing ideas to life through intuitive, meaningful, and scalable
+      digital experiences.
       <br />
       Beyond work, I dedicate my time to building personal projects that
       challenge me, inspire creativity, and push me to keep growing as a developer.
@@ -96,10 +101,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I am a proactive and organized Computer Systems Engineering student at
-        Universidad del Valle. I stand out for teamwork, quick decision-making,
-        and the ability to perform under pressure. My focus is on building scalable
-        mobile and web applications, working as a Full-Stack Developer, and applying
+        I am a Computer Systems Engineer graduated from Universidad del Valle,
+        with experience building scalable web and mobile applications, backend
+        APIs, databases, and AI-driven solutions. I stand out for teamwork,
+        quick decision-making, and the ability to perform under pressure, applying
         agile methodologies such as Scrum and XP.
       </>
     ),
@@ -108,6 +113,41 @@ const about: About = {
     display: true,
     title: "Work Experience",
     experiences: [
+      {
+        company: "Self-Employed",
+        timeframe: "Jan 2026 – Present",
+        role: "Freelance Full Stack Developer",
+        achievements: [
+          <>
+            Designed and developed custom software solutions for individual clients,
+            including web applications, backend APIs, databases, and mobile applications.
+          </>,
+          <>
+            Managed projects from requirements gathering to deployment, ensuring
+            maintainable and scalable solutions.
+          </>,
+        ],
+      },
+      {
+        company: "Research Department, Universidad Privada del Valle (UNIVALLE)",
+        timeframe: "Mar 2025 – Present",
+        role: "Graduate Research Assistant",
+        achievements: [
+          <>
+            Conduct research in artificial intelligence, machine learning, blockchain,
+            computer vision, and healthcare technologies.
+          </>,
+          <>
+            Responsible for model development, experimental evaluation, data analysis,
+            and scientific writing.
+          </>,
+          <>
+            Co-authored one paper published in IEEE Latin America Conference, two
+            accepted papers awaiting publication at the INATEL International Conference,
+            and one manuscript currently under peer review.
+          </>,
+        ],
+      },
       {
         company: "DocIA",
         timeframe: "Apr 2025 – Present",
@@ -146,12 +186,12 @@ const about: About = {
         description: (
           <div style={{ margin: 0, paddingLeft: "20px" }}>
             <p style={{ margin: "4px 0", fontWeight: "bold", fontSize: "15px", color: "#2c3e50" }}>
-              Bachelor’s in Computer Systems Engineering
+              Bachelor’s Degree in Computer Systems Engineering
             </p>
             <ul style={{ margin: "6px 0", paddingLeft: "20px", lineHeight: "1.6" }}>
-              <li>Currently in 8th semester</li>
+              <li>Graduated Computer Systems Engineer</li>
               <li>GPA: 85.7</li>
-              <li>2022 – Present</li>
+              <li>2022 – 2026</li>
             </ul>
           </div>
         ),
@@ -248,6 +288,35 @@ const about: About = {
                 style={{ color: "#2980b9" }}
               >
                 Credly Profile
+              </a>
+            </li>
+          </ul>
+        ),
+      },
+      {
+        title: "Awards & Research",
+        description: (
+          <ul style={{ margin: 0, paddingLeft: "20px" }}>
+            <li>
+              Seed Capital Award Winner - Banco Union, recognizing DocIA's innovation
+              and potential impact in digital healthcare through artificial intelligence.
+            </li>
+            <li>
+              Second Place in Bolivia's Plurinational Science and Technology Awards
+              (Environmental Category) for Sentinel AI.
+            </li>
+            <li>
+              IEEE Student Member contributing to research in artificial intelligence,
+              software engineering, and healthcare technologies.
+            </li>
+            <li>
+              Publications and research profile available on{" "}
+              <a
+                href="https://orcid.org/0009-0006-3400-1353"
+                target="_blank"
+                style={{ color: "#2980b9" }}
+              >
+                ORCID
               </a>
             </li>
           </ul>
